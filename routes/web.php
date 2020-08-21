@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/', function () {
-        return view('welcome');
+        return redirect('home');
     });
     Route::get('/logout', function () {
         Auth::logout();
